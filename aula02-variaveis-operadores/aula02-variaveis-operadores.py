@@ -36,7 +36,7 @@ n1 = int(input("digite o primeiro numero para a soma: "))
 n2 =  int(input("digite o segundo numero para a soma:  "))
 
 soma = n1 + n2
-print(soma)
+soma = print("A soma é: ", soma)
 
 print("Vai Corinthians")
 
