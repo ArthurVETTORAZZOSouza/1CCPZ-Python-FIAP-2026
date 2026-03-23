@@ -1,5 +1,5 @@
 
-print("Vai Corinthians")
+print("Vai Corinthians----------------")
 
 print(7 + 4)
 print("7 + 4")
@@ -21,23 +21,39 @@ print(nome, idade)
 print(idade + 1)
 
 '''
-desafios
+desafios____________________
 '''
 #1
 nome = input("Digite seu nome:")
-print("boas-vindas " + nome)
+print("boas-vindas:" , nome)
+#_______________________________
 
 #2
-nasc = date =input("Digite sua data de nascimento: ")
-print("voce nasceu em: " + nasc)
+nasc = input("Digite sua data de nascimento: dd/mm/aaaa ")
+print("voce nasceu em: " , nasc)
+#_______________________________
 
 #3
 n1 = int(input("digite o primeiro numero para a soma: "))
-n2 =  int(input("digite o segundo numero para a soma:  "))
+n2 = int(input("digite o segundo numero para a soma:  "))
 
 soma = n1 + n2
-soma = print("A soma é: ", soma)
+print("A soma é: ", soma)
+#_______________________________
 
-print("Vai Corinthians")
+print("Vai Corinthians--------------------------                ")
 
+'''
+EXERCICIOS
+'''
+#1
+area = 3.14159 * 5**2
+print(f" a area de um circulo com raio 5 é:{area}")
+
+#2
+TF = float(input("digite a temperatura em  Fahrenheit:"))
+TC = float((TF - 32 ) * 5/9)
+print("A temperatura em Celcius é: ", TC)
+
+#3
 
