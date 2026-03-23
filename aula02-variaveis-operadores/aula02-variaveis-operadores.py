@@ -11,7 +11,7 @@ comentarios de varias linhas
 nome="Arthur" #String
 idade=19 #int
 peso=80.1 #float
-print(nome,idade,peso)
+print("O nome, idade e peso sao: ",nome,idade,peso)
 print(f"oi,{nome}")
 
 nome = input("Digite sue nome:")
