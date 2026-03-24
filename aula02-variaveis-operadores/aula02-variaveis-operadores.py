@@ -71,4 +71,4 @@ print(f"O tenpo em horas de um percurso de 150km percorrido com velocidade media
 n1 = float(input("digite a primeira nota: "))
 n2 = float(input("digite a segunda nota: "))
 ma = ( n1 + n2 ) /2
-print(f'a media do aluno foi {ma}')
+print(f'a media do aluno foi de: {ma}')
