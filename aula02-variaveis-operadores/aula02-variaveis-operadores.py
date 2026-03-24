@@ -53,7 +53,22 @@ print(f" a area de um circulo com raio 5 é:{area}")
 #2
 TF = float(input("digite a temperatura em  Fahrenheit:"))
 TC = float((TF - 32 ) * 5/9)
-print("A temperatura em Celcius é: ", TC)
+print(f"A temperatura em Celcius é: ", TC)
 
-#3
+#4
+livros  = 25 * 3
+canetas = 2  * 5
+gasto_total = f"O gasto total da compra de tres livros e duas canetas  foi de: {livros + canetas}R$"
+print(gasto_total)
 
+#5
+distancia = 150
+velom = 60
+tempo = distancia/velom
+print(f"O tenpo em horas de um percurso de 150km percorrido com velocidade media de 60km é de: {tempo}h")
+
+#6
+n1 = float(input("digite a primeira nota: "))
+n2 = float(input("digite a segunda nota: "))
+ma = ( n1 + n2 ) /2
+print(f'a media do aluno foi {ma}')
