@@ -12,7 +12,6 @@ sala_critica = 0
 numero_sala_critica = 1
 for sala in temperaturas:
 
-
     for temperatura in sala:
         if temperatura >= 33:
             criticos +=1
@@ -29,14 +28,11 @@ for sala in temperaturas:
         sala_critica = criticos
         numero_sala_critica = i+1
 
-
+ 
     i+=1
     criticos = 0
 
-
     print()
-
-
 
 
 print(f"A sala com maior quantidade de temperatura é: {numero_sala_critica}")
