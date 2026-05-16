@@ -11,7 +11,6 @@ criticos = 0
 sala_critica = 0
 numero_sala_critica = 1
 for sala in temperaturas:
-
     for temperatura in sala:
         if temperatura >= 33:
             criticos +=1
