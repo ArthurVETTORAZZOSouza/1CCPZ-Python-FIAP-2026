@@ -32,5 +32,5 @@ def verifica_erros(codigos_endpoint):
             return True
     return False
 print(verifica_erros(status[0]))
-#teste
+
 
