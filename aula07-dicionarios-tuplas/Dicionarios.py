@@ -44,6 +44,6 @@ for personagem in personagens:
     idade = personagem["idade"]
     episodios = personagem["episodios"]
 
-    for keys, values in personagem.items():
+    for key, value in personagem.items():
         print(f"{key}: {value}")
     
