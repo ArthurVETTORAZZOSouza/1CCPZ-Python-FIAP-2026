@@ -6,8 +6,10 @@ print(eng2sp)
 
 eng2sp = {
     'one': 'uno',
-    'two': 'dos',
+    'two': 'dos'
 }
 
 print(eng2sp)
 print(eng2sp['two'])
+
+print('dos' in eng2sp)
