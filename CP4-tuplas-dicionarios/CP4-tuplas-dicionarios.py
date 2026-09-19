@@ -41,7 +41,7 @@ print(campeao)
 print(
     "/login" in status,
     200 in status,
-    ("login", 200) in status.items()
+    ("/login", 200) in status.items()
 )
 """
 
