@@ -1,6 +1,7 @@
 from encodings import utf_8
 from pathlib import Path
-import json
+import json, csv
+from sys import path
 
 DATA_DIR = Path(__file__).resolve().parent / "data"
 DATA_DIR.mkdir(exist_ok=True)
@@ -17,11 +18,48 @@ def read_leads():
         return json.loads(DB_PATH.read_text(encoding="utf_8"))
     except json.JSONDecodeError:
         return []
-if __name__ =="__main__":
-    print(read_leads())
+    # if __name__ =="__main__":
+    #     print(read_leads())
 
 # CREATE
 def create_leads(lead_dict):
     leads = read_leads()
     leads.append(lead_dict)
     DB_PATH.write_text(json.dumps(leads, ensure_ascii=False, indent =2), encoding="utf-8")
+
+# READ com BUSCA
+def read_leads_search(query):
+    """função que recebe  o texto da busca e retorna uma LISTA com os resulrados"""
+    leads = read_leads() # lista de dicionarios / lista de leads / array of dicts
+    results = []
+
+    for i, lead in enumerate(leads):
+        txt_lead = f"{lead["name"]} {lead["email"]}".lower()
+        #print(txt_lead)
+
+        if query.lower() in txt_lead:
+            results.append((i, lead))
+
+    return results
+
+
+# Export CSV
+def export_csv():
+    leads = read_leads()
+    """Exportar leads para CSV e RETORNAR o caminho do arquivo"""
+    path_csv = DATA_DIR / "leads.csv"
+    leads = read_leads()
+
+    try:
+        with path_csv.open("w", newline="", encoding="utf_8") as file_csv:
+            writer = csv.DictWriter(file_csv, leads[0].keys())
+            writer.writeheader()
+            for row_dict in leads:
+                writer.writerow(row_dict)
+        return path_csv
+    except PermissionError:
+        return None
+
+# TEMPORARIO
+#print(read_leads_search("Heitor"))
+
